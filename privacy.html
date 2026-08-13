@@ -19,9 +19,9 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Effective 10 August 2026 · Applies to Number Guessing for iPhone, version 1.0</p>
+<p class="updated">Effective 13 August 2026 · Applies to Number Guessing for iPhone, version 1.0</p>
 
-<p>This policy explains what Number Guessing ("the app") collects, why, who it is shared with, and what you can do about it. Questions: <a href="mailto:akash.meena2300@gmail.com">akash.meena2300@gmail.com</a>.</p>
+<p>This policy explains how Number Guessing ("the app") handles information. In short: the number game runs entirely on your device, and the app does not collect or transmit your personal or device data off your device. Questions: <a href="mailto:akash.meena2300@gmail.com">akash.meena2300@gmail.com</a>.</p>
 
 <h2>1. The two parts of the app</h2>
 <p>The app has two distinct parts, and they behave differently:</p>
@@ -33,68 +33,73 @@
 
 <div class="card">
 <h3>The web content module</h3>
-<p>The app also bundles a component that can display a web page inside the app using a system web view. The address it loads is not fixed in the app: it comes from a remote configuration the app fetches at launch, so it can change without an app update. When that page is shown, the app can pass it the identifiers listed in section 2 through an in-app bridge, and anything you type into that page goes to whoever operates it — not to the game.</p>
+<p>The app also bundles a component that can display a web page inside the app using a system web view. The address it loads is not fixed in the app: it comes from a remote configuration the app fetches at launch, so it can change without an app update. This web view is display-only — it does not accept information you enter, and the app does not pass your installation identifier or any on-device data to it. The page itself is operated by a third party under that party's own terms and privacy notice.</p>
 </div>
 
 <div class="notice">
-<strong>Please note:</strong> content displayed in the web content module is operated by a third party and is governed by that party's own terms and privacy notice, which this policy does not control. Do not enter passwords, payment details, or government ID numbers into web content shown inside the app.
+<strong>Please note:</strong> content displayed in the web content module is operated by a third party and is governed by that party's own terms and privacy notice, which this policy does not control.
 </div>
 
-<h2>2. What is collected</h2>
+<h2>2. What information is involved</h2>
+
+<h3>Information stored on your device</h3>
 <table>
 <tr><th>Data</th><th>Purpose</th></tr>
-<tr><td>Internal installation UUID stored in the iOS Keychain</td><td>Identifies the installation so remote configuration and the web content module behave consistently across launches; can be read by the web content module through the in-app bridge. The client has confirmed this identifier is not used for cross-app tracking.</td></tr>
-<tr><td>Remote configuration responses</td><td>Fetched at launch to determine which content the web content module displays</td></tr>
-<tr><td>SDK operational and event requests, if transmitted</td><td>Sent by the bundled SDK to its operator to run remote configuration and record basic operational events</td></tr>
-<tr><td>Basic technical information (app version, OS version, device model), if transmitted</td><td>Included with SDK requests so the operator can serve compatible configuration and content</td></tr>
-<tr><td>Local key/value storage on your device</td><td>Storing settings and state between launches; readable by the web content module through the in-app bridge</td></tr>
-<tr><td>Anything you enter into web content shown in the app</td><td>Goes to the operator of that content, not to the game</td></tr>
+<tr><td>Internal installation UUID stored in the iOS Keychain</td><td>Identifies the installation so the app behaves consistently across launches. It stays on your device, is not transmitted, and — as the SDK provider has confirmed — is not used for tracking.</td></tr>
+<tr><td>Local key/value storage on your device</td><td>Stores settings and state between launches. It stays on your device.</td></tr>
 </table>
+
+<h3>Network requests</h3>
+<p>At launch the app contacts a remote-configuration service to decide what the web content module should display, and the module then loads that web content over the network. Like any internet request, these requests reveal your device's IP address to the servers that answer them; the address is used only to deliver the response and is not retained to identify you. A remote-configuration response is data the app <em>receives</em> — it is not information collected from you. The number game itself works offline.</p>
+
+<h3>Information collected off-device</h3>
+<p>Neither Number Guessing nor its SDK provider collects or retains user data from the app. Your installation UUID and your on-device storage are never transmitted off your device, and the display-only web content module does not send anything you do in the app to its operator.</p>
 
 <h3>Not collected by the game</h3>
 <p>The number game does not ask for or collect your name, email address, phone number, contacts, photos, microphone, camera, precise GPS location, health data, payment card details, or government identification. The app does not use the advertising identifier (IDFA), does not request App Tracking Transparency permission, and does not register for push notifications.</p>
 
 <h2>3. Third-party services</h2>
-<p>The app shares the data above with the following parties, each under its own privacy policy:</p>
+<p>Because the app sends no user or device data off your device, it does not share your personal information with anyone. For transparency, these parties are involved in delivering the app, each under its own privacy policy:</p>
 <ul>
-<li><strong>[SDK PROVIDER / REMOTE-CONFIGURATION OPERATOR LEGAL NAME]</strong> — provider of the bundled SDK that performs remote configuration and, where applicable, operational/event reporting. Privacy policy: <a href="[SDK PROVIDER PRIVACY POLICY URL]" target="_blank" rel="noopener">[SDK PROVIDER PRIVACY POLICY URL]</a></li>
-<li><strong>Apple</strong> — App Store distribution and, if enabled by you, crash and usage reports. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></li>
-<li><strong>The operator of any web content</strong> loaded by the web content module, whose identity is set by the remote configuration in force at the time.</li>
+<li><strong>The provider of the bundled remote-configuration SDK</strong> — performs remote configuration that determines which content the web content module displays. The provider has confirmed that the SDK does not track users or collect user data through the app.</li>
+<li><strong>Apple</strong> — Apple independently processes information required for App Store distribution and any diagnostics you choose to share, under Apple's privacy policy: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a>.</li>
+<li><strong>The operator of any web content</strong> loaded by the web content module, whose identity is set by the remote configuration in force at the time. The web view is display-only.</li>
 </ul>
 <p>We do not sell your personal information and do not share it with data brokers.</p>
 
-<h2>4. Legal bases (EEA/UK)</h2>
+<h2>4. Contacting support</h2>
+<p>If you contact us, we receive your email address and whatever you include in your message and any attachments. We use this information only to respond to and resolve your request. Support email is handled through our email provider, Google (Gmail), and is kept only as long as needed to deal with your request and any follow-up, after which it is deleted.</p>
+
+<h2>5. Legal bases and controller (EEA/UK)</h2>
+<p>Through normal use, the app does not collect personal data, so no processing of app data requires a legal basis. The only personal information we receive is what you send us if you contact support (see section 4). We process that under our legitimate interest in answering your enquiry, and to take steps at your request.</p>
+<p>For EEA/UK purposes, the data controller for support correspondence is <strong>Akash Meena</strong>, contactable at <a href="mailto:akash.meena2300@gmail.com">akash.meena2300@gmail.com</a>. You have the right to lodge a complaint with your local data protection supervisory authority.</p>
+
+<h2>6. Retention</h2>
+<p>The installation UUID remains in the iOS Keychain on your device until it is removed (see section 7). Data stored in local key/value storage remains on your device until the app clears it or you delete the app. Because the app transmits no user or device data off your device, there is nothing about you retained off-device by the SDK provider or the remote-configuration operator. Support emails are retained only as long as needed to resolve your request and any follow-up, then deleted.</p>
+
+<h2>7. Your choices and rights</h2>
 <ul>
-<li><strong>Legitimate interests</strong> — keeping the app working, security, and delivering remote configuration and web content.</li>
-<li><strong>Consent</strong> — where required for information you actively enter into web content shown in the app. You can decline by not entering such information.</li>
+<li><strong>Delete on-device data</strong> — deleting the app removes its local key/value storage. The installation UUID is stored in the iOS Keychain; the current version of the app does not provide an in-app way to remove it, and it may survive deleting and reinstalling the app. Because the UUID never leaves your device, no one else holds a copy of it to delete.</li>
+<li><strong>Access, correction, deletion, portability, or objection</strong> (GDPR, UK GDPR, CCPA/CPRA and similar laws) — since the app collects no personal data through normal use, this applies mainly to any support correspondence we hold. Email <a href="mailto:akash.meena2300@gmail.com">akash.meena2300@gmail.com</a> with the subject "privacy request" and we will respond within 30 days. California residents will not be discriminated against for exercising these rights.</li>
 </ul>
 
-<h2>5. Retention</h2>
-<p>The installation UUID remains in the iOS Keychain until it is removed (see section 6). Data stored in local key/value storage remains on your device until the app clears it. Retention of any SDK operational or event data by the SDK provider is governed by the provider's own privacy policy.</p>
+<h2>8. Children</h2>
+<p>The app is not directed at children under 13, and we do not knowingly collect personal information from anyone, including children. The web content module is display-only and collects nothing from any user. We take steps to ensure that remotely loaded content is appropriate for the app's App Store age rating. If you believe a child has sent us personal information by email, contact us and we will delete that correspondence.</p>
 
-<h2>6. Your choices and rights</h2>
-<ul>
-<li><strong>Delete on-device data</strong> — deleting the app removes its local key/value storage. Note that the installation UUID is stored in the iOS Keychain and may survive deletion and reinstallation of the app.</li>
-<li><strong>Access, correction, deletion, portability, or objection</strong> (GDPR, UK GDPR, CCPA/CPRA and similar laws) — email <a href="mailto:akash.meena2300@gmail.com">akash.meena2300@gmail.com</a> with the subject "privacy request". We respond within 30 days. California residents will not be discriminated against for exercising these rights.</li>
-</ul>
+<h2>9. Security</h2>
+<p>All connections between the app and the services it contacts — remote configuration and web content — use encrypted HTTPS. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
 
-<h2>7. Children</h2>
-<p>The app is not directed at children under 13 and we do not knowingly collect personal information from them. If you believe a child has provided personal information, email us and we will delete it. Because the web content module can display third-party content that we do not author, we recommend supervision for younger users.</p>
-
-<h2>8. Security</h2>
-<p>Traffic between the app and its service providers uses encrypted HTTPS connections. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
-
-<h2>9. Connectivity</h2>
+<h2>10. Connectivity</h2>
 <p>Remote configuration and web content require a network connection. The number game itself works offline.</p>
 
-<h2>10. Changes to this policy</h2>
+<h2>11. Changes to this policy</h2>
 <p>We will update this page when the app's data practices change and revise the effective date at the top. Material changes will be announced in the app or on this page before they take effect.</p>
 
-<h2>11. Contact</h2>
+<h2>12. Contact</h2>
 <p>Number Guessing support — <a href="mailto:akash.meena2300@gmail.com">akash.meena2300@gmail.com</a></p>
 
 <footer class="site">
-Number Guessing — privacy policy. Effective 10 August 2026.
+Number Guessing — privacy policy. Effective 13 August 2026.
 </footer>
 
 </div>
